@@ -1,3 +1,12 @@
+//!    Preloader
+
+window.onload = function () {
+    document.body.classList.add("preloader");
+    window.setTimeout(function () {
+       document.body.classList.remove("preloader");
+    }, 500);
+ };
+
 $(document).ready(function () {
    $(".accordion-list > li > .answer").hide();
 
