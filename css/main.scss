@@ -1,0 +1,410 @@
+//! Обнуление стилей и подключение Шрифтов
+@import url("");
+@import url("");
+@font-face {
+   font-family: SALongBeach;
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+   src: url("../fonts/TSRemarkerRegular.otf") format("truetype");
+}
+
+@font-face {
+   font-family: SALongBeach;
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+   src: url("../fonts/SALongBeach.otf") format("truetype");
+}
+
+$SALongBeach: "SALongBeach", sans-serif;
+$TSRemarkerRegular: "TSRemarkerRegular", sans-serif;
+html {
+   // Обнуление стилей
+
+   html,
+   body,
+   div,
+   span,
+   applet,
+   object,
+   iframe,
+   h1,
+   h2,
+   h3,
+   h4,
+   h5,
+   h6,
+   p,
+   blockquote,
+   pre,
+   a,
+   abbr,
+   acronym,
+   address,
+   big,
+   cite,
+   code,
+   del,
+   dfn,
+   em,
+   img,
+   ins,
+   kbd,
+   q,
+   s,
+   samp,
+   small,
+   strike,
+   strong,
+   sub,
+   sup,
+   tt,
+   var,
+   b,
+   u,
+   i,
+   center,
+   dl,
+   dt,
+   dd,
+   ol,
+   ul,
+   li,
+   fieldset,
+   form,
+   label,
+   legend,
+   table,
+   caption,
+   tbody,
+   tfoot,
+   thead,
+   tr,
+   th,
+   td,
+   article,
+   aside,
+   canvas,
+   details,
+   embed,
+   figure,
+   figcaption,
+   footer,
+   header,
+   hgroup,
+   menu,
+   nav,
+   output,
+   ruby,
+   section,
+   summary,
+   time,
+   mark,
+   audio,
+   video {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+   }
+   /* HTML5 display-role reset for older browsers */
+   article,
+   aside,
+   details,
+   figcaption,
+   figure,
+   footer,
+   header,
+   hgroup,
+   menu,
+   nav,
+   section {
+      display: block;
+   }
+   ol,
+   ul {
+      list-style: none;
+   }
+   blockquote,
+   q {
+      quotes: none;
+   }
+   blockquote:before,
+   blockquote:after,
+   q:before,
+   q:after {
+      content: "";
+      content: none;
+   }
+   table {
+      border-collapse: collapse;
+      border-spacing: 0;
+   }
+}
+//! ==================
+* {
+   box-sizing: border-box;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+   &::-webkit-scrollbar {
+      z-index: 999999999999999999999999999999999999 !important;
+      background: #0a1318 !important;
+      width: 15px;
+   }
+   &::-webkit-scrollbar-track {
+      z-index: 999999999999999999999999999999999999 !important;
+      transition: 0.5s;
+   }
+   &::-webkit-scrollbar-thumb {
+      z-index: 999999999999999999999999999999999999 !important;
+      background: #1ee5c1 !important;
+      cursor: pointer !important;
+   }
+   &::-webkit-scrollbar-button {
+      display: none;
+   }
+}
+
+$color: #350a5e;
+$size: 200px;
+.preloader {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   .preloader_wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #221f2c;
+      width: 105%;
+      height: 105%;
+      z-index: 10000;
+   }
+   .circle {
+      width: $size;
+      height: $size;
+      background: red;
+      border-radius: 50%;
+      animation: spin 2s alternate infinite;
+      position: absolute;
+   }
+
+   @for $i from 1 to 10 {
+      .circle:nth-child(#{$i}) {
+         animation-delay: $i * 0.1s;
+         background: lighten($color, $i * 10%);
+         width: $size - $i * 20;
+         height: $size - $i * 20;
+      }
+   }
+
+   @keyframes spin {
+      0% {
+         border-radius: 50%;
+         transform: rotate(0);
+      }
+      20% {
+         border-radius: 50%;
+         transform: rotate(0);
+      }
+      90% {
+         border-radius: 5%;
+         transform: rotate(90deg);
+      }
+      100% {
+         border-radius: 5%;
+         transform: rotate(90deg);
+      }
+   }
+}
+
+//! Плавная прогрузка Элементов
+
+// @media (min-height: 300px) {
+//    //?  element-animation
+//    .element-animation {
+//       opacity: 0;
+//       transform: scale(0.9);
+//    }
+
+//    .element-show {
+//       opacity: 1;
+//       transition: 0.5s;
+//       transform: scale(1);
+//    }
+
+//    //* Из левой части плавно появляется
+//    //? animation_fromLeft_to_right element-animation
+//    .animation_fromLeft_to_right.element-animation {
+//       transform: translate(-50%, 0);
+//    }
+//    .animation_fromLeft_to_right.element-show {
+//       transform: translate(0, 0) !important;
+//       transition: 1.5s !important;
+//    }
+
+//    //* Из правой части плавно появляется
+//    //? animation_fromRight_to_left element-animation
+//    .animation_fromRight_to_left.element-animation {
+//       transform: translate(50%, 0);
+//    }
+//    .animation_fromRight_to_left.element-show {
+//       transform: translate(0, 0) !important;
+//       transition: 1.5s !important;
+//    }
+
+//    //* Из нижней части плавно появляется
+//    //? animation_fromBottom_to_up element-animation
+//    .animation_fromBottom_to_up.element-animation {
+//       transform: translate(0, 10%);
+//    }
+//    .animation_fromBottom_to_up.element-show {
+//       transform: translate(0, 0) !important;
+//       transition: 1s !important;
+//    }
+
+//    //* Из верхней части плавно появляется
+//    //? animation_fromUP_to_bottom element-animation
+//    .animation_fromUP_to_bottom.element-animation {
+//       transform: translate(0, -20%);
+//    }
+//    .animation_fromUP_to_bottom.element-show {
+//       transform: translate(0, 0) !important;
+//       transition: 1s !important;
+//    }
+// }
+//!=======================================
+
+//!=======================================
+//!       Прижимание футера к низу
+//!=======================================
+
+.body_content {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   overflow-x: hidden; //? Для Анимаций
+   header {
+      width: 100%;
+   }
+
+   main {
+      /* Чтобы занимал оставшееся пространство */
+      flex-grow: 1;
+      width: 100%;
+   }
+
+   footer {
+      /* Чтобы footer не уменьшался */
+      flex-shrink: 0;
+      width: 100%;
+   }
+}
+//!=======================================
+
+//! Основные стили
+body {
+   background: #101932;
+
+   color: #fff;
+   scroll-behavior: smooth;
+   .h1 {
+      font-family: "TSRemarkerRegular", sans-serif;
+   }
+   .h2 {
+      font-family: "SALongBeach", sans-serif;
+   }
+}
+.accordion {
+   //    padding: 69px 0 75px;
+}
+.accordion_wrapper {
+   width: 100%;
+   max-width: 1036px;
+   margin: 48px auto 0;
+   transition: 0.5s;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+ul.accordion-list {
+   position: relative;
+   display: block;
+   width: 100%;
+   height: auto;
+   padding: 20px;
+   margin: 0;
+   list-style: none;
+
+   li {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #384d70;
+      border-radius: 15px;
+      padding: 17px 25px 18px 30px;
+      margin: 0 auto 25px auto;
+      cursor: pointer;
+
+      &.active {
+         h3 {
+            span {
+               transform: rotate(-180deg);
+            }
+         }
+      }
+
+      h3 {
+         font-family: $SALongBeach;
+         font-size: 20px;
+         line-height: 24px;
+         color: #ffffff;
+         position: relative;
+         justify-content: space-between;
+         align-items: center;
+         display: flex;
+         width: 100%;
+         height: auto;
+         padding: 0 0 0 0;
+         margin: 0;
+         cursor: pointer;
+         span {
+            transition: 0.5s;
+         }
+      }
+
+      div.answer {
+         position: relative;
+         display: block;
+         width: 100%;
+         height: auto;
+         margin: 20px 0 0 0;
+         padding: 0;
+         cursor: pointer;
+
+         p {
+            position: relative;
+            display: block;
+            font-family: $TSRemarkerRegular;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: justify;
+            opacity: 0.8;
+            color: #ffffff;
+            padding: 10px 0 0 0;
+            cursor: pointer;
+            margin: 0 0 15px 0;
+         }
+      }
+   }
+}

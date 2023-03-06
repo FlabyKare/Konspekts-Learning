@@ -1,0 +1,435 @@
+@charset "UTF-8";
+@import url("");
+@import url("");
+@font-face {
+  font-family: SALongBeach;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/TSRemarkerRegular.otf") format("truetype");
+}
+@font-face {
+  font-family: SALongBeach;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/SALongBeach.otf") format("truetype");
+}
+html {
+  /* HTML5 display-role reset for older browsers */
+}
+html html,
+html body,
+html div,
+html span,
+html applet,
+html object,
+html iframe,
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6,
+html p,
+html blockquote,
+html pre,
+html a,
+html abbr,
+html acronym,
+html address,
+html big,
+html cite,
+html code,
+html del,
+html dfn,
+html em,
+html img,
+html ins,
+html kbd,
+html q,
+html s,
+html samp,
+html small,
+html strike,
+html strong,
+html sub,
+html sup,
+html tt,
+html var,
+html b,
+html u,
+html i,
+html center,
+html dl,
+html dt,
+html dd,
+html ol,
+html ul,
+html li,
+html fieldset,
+html form,
+html label,
+html legend,
+html table,
+html caption,
+html tbody,
+html tfoot,
+html thead,
+html tr,
+html th,
+html td,
+html article,
+html aside,
+html canvas,
+html details,
+html embed,
+html figure,
+html figcaption,
+html footer,
+html header,
+html hgroup,
+html menu,
+html nav,
+html output,
+html ruby,
+html section,
+html summary,
+html time,
+html mark,
+html audio,
+html video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html article,
+html aside,
+html details,
+html figcaption,
+html figure,
+html footer,
+html header,
+html hgroup,
+html menu,
+html nav,
+html section {
+  display: block;
+}
+html ol,
+html ul {
+  list-style: none;
+}
+html blockquote,
+html q {
+  quotes: none;
+}
+html blockquote:before,
+html blockquote:after,
+html q:before,
+html q:after {
+  content: "";
+  content: none;
+}
+html table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar {
+  z-index: 1000000000000000000000000000000000000 !important;
+  background: #0a1318 !important;
+  width: 15px;
+}
+body::-webkit-scrollbar-track {
+  z-index: 1000000000000000000000000000000000000 !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+body::-webkit-scrollbar-thumb {
+  z-index: 1000000000000000000000000000000000000 !important;
+  background: #1ee5c1 !important;
+  cursor: pointer !important;
+}
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.preloader .preloader_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #221f2c;
+  width: 105%;
+  height: 105%;
+  z-index: 10000;
+}
+.preloader .circle {
+  width: 200px;
+  height: 200px;
+  background: red;
+  border-radius: 50%;
+  -webkit-animation: spin 2s alternate infinite;
+          animation: spin 2s alternate infinite;
+  position: absolute;
+}
+.preloader .circle:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+  background: #4f0f8c;
+  width: 180px;
+  height: 180px;
+}
+.preloader .circle:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+  background: #6914ba;
+  width: 160px;
+  height: 160px;
+}
+.preloader .circle:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  background: #831ae7;
+  width: 140px;
+  height: 140px;
+}
+.preloader .circle:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+  background: #9c48ec;
+  width: 120px;
+  height: 120px;
+}
+.preloader .circle:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  background: #b577f0;
+  width: 100px;
+  height: 100px;
+}
+.preloader .circle:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+  background: #cea5f5;
+  width: 80px;
+  height: 80px;
+}
+.preloader .circle:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  background: #e7d3fa;
+  width: 60px;
+  height: 60px;
+}
+.preloader .circle:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+  background: white;
+  width: 40px;
+  height: 40px;
+}
+.preloader .circle:nth-child(9) {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+  background: white;
+  width: 20px;
+  height: 20px;
+}
+@-webkit-keyframes spin {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20% {
+    border-radius: 50%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  90% {
+    border-radius: 5%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    border-radius: 5%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+@keyframes spin {
+  0% {
+    border-radius: 50%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  20% {
+    border-radius: 50%;
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  90% {
+    border-radius: 5%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  100% {
+    border-radius: 5%;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
+
+.body_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.body_content header {
+  width: 100%;
+}
+.body_content main {
+  /* Чтобы занимал оставшееся пространство */
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+}
+.body_content footer {
+  /* Чтобы footer не уменьшался */
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 100%;
+}
+
+body {
+  background: #101932;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+body .h1 {
+  font-family: "TSRemarkerRegular", sans-serif;
+}
+body .h2 {
+  font-family: "SALongBeach", sans-serif;
+}
+
+.accordion_wrapper {
+  width: 100%;
+  max-width: 1036px;
+  margin: 48px auto 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+ul.accordion-list {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+ul.accordion-list li {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #384d70;
+  border-radius: 15px;
+  padding: 17px 25px 18px 30px;
+  margin: 0 auto 25px auto;
+  cursor: pointer;
+}
+ul.accordion-list li.active h3 span {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+ul.accordion-list li h3 {
+  font-family: "SALongBeach", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  position: relative;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 0 0 0 0;
+  margin: 0;
+  cursor: pointer;
+}
+ul.accordion-list li h3 span {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+ul.accordion-list li div.answer {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 20px 0 0 0;
+  padding: 0;
+  cursor: pointer;
+}
+ul.accordion-list li div.answer p {
+  position: relative;
+  display: block;
+  font-family: "TSRemarkerRegular", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: justify;
+  opacity: 0.8;
+  color: #ffffff;
+  padding: 10px 0 0 0;
+  cursor: pointer;
+  margin: 0 0 15px 0;
+}
