@@ -1,19 +1,24 @@
 @charset "UTF-8";
-@import url("");
-@import url("");
 @font-face {
-  font-family: SALongBeach;
+  font-family: TSRemarkerRegular;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/TSRemarkerRegular.otf") format("truetype");
+  src: url("../fonts/TSRemarkerRegular.otf") format("opentype");
 }
 @font-face {
   font-family: SALongBeach;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/SALongBeach.otf") format("truetype");
+  src: url("../fonts/SALongBeach.otf") format("opentype");
+}
+@font-face {
+  font-family: RimmaSansBold;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Rimma_Sans_bold.ttf") format("truetype");
 }
 html {
   /* HTML5 display-role reset for older browsers */
@@ -334,16 +339,48 @@ body::-webkit-scrollbar-button {
   width: 100%;
 }
 
+.main_body {
+  padding-top: 100px;
+}
+.main_body .main_page_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 45px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 body {
   background: #101932;
+  padding-top: 50px !important;
   color: #fff;
   scroll-behavior: smooth;
 }
-body .h1 {
-  font-family: "TSRemarkerRegular", sans-serif;
-}
-body .h2 {
+
+.page-link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 300px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 25px;
+  border: 1px solid blue;
+  background: rgb(3, 3, 178);
+  color: orange;
   font-family: "SALongBeach", sans-serif;
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  text-align: center;
+  font-size: 30px;
 }
 
 .accordion_wrapper {
@@ -426,6 +463,7 @@ ul.accordion-list li div.answer p {
   font-family: "TSRemarkerRegular", sans-serif;
   font-size: 18px;
   line-height: 24px;
+  letter-spacing: 1.4px;
   text-align: justify;
   opacity: 0.8;
   color: #ffffff;

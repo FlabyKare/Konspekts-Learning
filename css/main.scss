@@ -1,12 +1,10 @@
 //! Обнуление стилей и подключение Шрифтов
-@import url("");
-@import url("");
 @font-face {
-   font-family: SALongBeach;
+   font-family: TSRemarkerRegular;
    font-weight: 400;
    font-style: normal;
    font-display: swap;
-   src: url("../fonts/TSRemarkerRegular.otf") format("truetype");
+   src: url("../fonts/TSRemarkerRegular.otf") format("opentype");
 }
 
 @font-face {
@@ -14,10 +12,17 @@
    font-weight: 400;
    font-style: normal;
    font-display: swap;
-   src: url("../fonts/SALongBeach.otf") format("truetype");
+   src: url("../fonts/SALongBeach.otf") format("opentype");
 }
 
-$SALongBeach: "SALongBeach", sans-serif;
+@font-face {
+   font-family: RimmaSansBold;
+   font-weight: 700;
+   font-style: normal;
+   font-display: swap;
+   src: url("../fonts/Rimma_Sans_bold.ttf") format("truetype");
+}
+$RimmaSansBold: "SALongBeach", sans-serif;
 $TSRemarkerRegular: "TSRemarkerRegular", sans-serif;
 html {
    // Обнуление стилей
@@ -311,17 +316,35 @@ $size: 200px;
 //!=======================================
 
 //! Основные стили
+.main_body {
+   padding-top: 100px;
+   .main_page_content {
+      display: flex;
+      flex-direction: column;
+      gap: 45px;
+      justify-content: flex-start;
+   }
+}
 body {
    background: #101932;
-
+   padding-top: 50px !important;
    color: #fff;
    scroll-behavior: smooth;
-   .h1 {
-      font-family: "TSRemarkerRegular", sans-serif;
-   }
-   .h2 {
-      font-family: "SALongBeach", sans-serif;
-   }
+}
+.page-link {
+   width: fit-content;
+   min-width: 300px;
+   height: fit-content;
+   padding: 25px;
+   border: 1px solid blue;
+   background: rgb(3, 3, 178);
+   color: orange;
+   font-family: $RimmaSansBold;
+   display: block;
+   margin: 0 auto;
+   text-decoration: none;
+   text-align: center;
+   font-size: 30px;
 }
 .accordion {
    //    padding: 69px 0 75px;
@@ -365,7 +388,7 @@ ul.accordion-list {
       }
 
       h3 {
-         font-family: $SALongBeach;
+         font-family: $RimmaSansBold;
          font-size: 20px;
          line-height: 24px;
          color: #ffffff;
@@ -398,6 +421,7 @@ ul.accordion-list {
             font-family: $TSRemarkerRegular;
             font-size: 18px;
             line-height: 24px;
+            letter-spacing: 1.4px;
             text-align: justify;
             opacity: 0.8;
             color: #ffffff;
