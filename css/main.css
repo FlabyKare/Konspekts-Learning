@@ -1,24 +1,17 @@
 @charset "UTF-8";
 @font-face {
-  font-family: TSRemarkerRegular;
+  font-family: ElmonoPro;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/TSRemarkerRegular.otf") format("opentype");
+  src: url("../fonts/ElmonoPro.otf") format("opentype");
 }
 @font-face {
-  font-family: SALongBeach;
+  font-family: rfkrabuler_regular;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/SALongBeach.otf") format("opentype");
-}
-@font-face {
-  font-family: RimmaSansBold;
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/Rimma_Sans_bold.ttf") format("truetype");
+  src: url("../fonts/rfkrabuler_regular.ttf") format("truetype");
 }
 html {
   /* HTML5 display-role reset for older browsers */
@@ -375,7 +368,7 @@ body {
   border: 1px solid blue;
   background: rgb(3, 3, 178);
   color: orange;
-  font-family: "SALongBeach", sans-serif;
+  font-family: "ElmonoPro", sans-serif;
   display: block;
   margin: 0 auto;
   text-decoration: none;
@@ -424,7 +417,7 @@ ul.accordion-list li.active h3 span {
           transform: rotate(-180deg);
 }
 ul.accordion-list li h3 {
-  font-family: "SALongBeach", sans-serif;
+  font-family: "ElmonoPro", sans-serif;
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
@@ -460,7 +453,7 @@ ul.accordion-list li div.answer {
 ul.accordion-list li div.answer p {
   position: relative;
   display: block;
-  font-family: "TSRemarkerRegular", sans-serif;
+  font-family: "rfkrabuler_regular", sans-serif;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 1.4px;
