@@ -7,11 +7,11 @@
   src: url("../fonts/ElmonoPro.otf") format("opentype");
 }
 @font-face {
-  font-family: rfkrabuler_regular;
+  font-family: MazzardMedium;
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url("../fonts/rfkrabuler_regular.ttf") format("truetype");
+  src: url("../fonts/MazzardMedium.ttf") format("truetype");
 }
 html {
   /* HTML5 display-role reset for older browsers */
@@ -453,8 +453,8 @@ ul.accordion-list li div.answer {
 ul.accordion-list li div.answer p {
   position: relative;
   display: block;
-  font-family: "rfkrabuler_regular", sans-serif;
-  font-size: 18px;
+  font-family: "MazzardMedium", sans-serif;
+  font-size: 15px;
   line-height: 24px;
   letter-spacing: 1.4px;
   text-align: justify;
@@ -462,6 +462,5 @@ ul.accordion-list li div.answer p {
   color: #ffffff;
   padding: 10px 0 0 0;
   cursor: pointer;
-  margin: 0 0 15px 0;
-  hyphens: auto;
+  margin: 0 0 20px 0;
 }
