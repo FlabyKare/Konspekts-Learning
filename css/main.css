@@ -450,7 +450,11 @@ ul.accordion-list li div.answer {
   padding: 0;
   cursor: pointer;
 }
-ul.accordion-list li div.answer p {
+ul.accordion-list li div.answer a {
+  text-decoration: none;
+}
+ul.accordion-list li div.answer p,
+ul.accordion-list li div.answer a {
   position: relative;
   display: block;
   font-family: "MazzardMedium", sans-serif;

@@ -407,8 +407,12 @@ ul.accordion-list {
          margin: 20px 0 0 0;
          padding: 0;
          cursor: pointer;
+         a {
+            text-decoration: none;
+         }
 
-         p {
+         p,
+         a {
             position: relative;
             display: block;
             font-family: $MazzardMedium;
